@@ -1,10 +1,13 @@
 #!/usr/bin/python
 
 import sys
+import exceptions
 
 def power(p, q, m):
 	'''power(p, q, m) -> p ^ q (mod m)
 	'''
+	if (p == 0) and (q == 0):
+		raise Exception('p and q cannot both be 0')
 	r = 1
 	while q > 0:
 		if q % 2 == 1:
